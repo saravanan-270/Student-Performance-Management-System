@@ -223,22 +223,14 @@ The student data was generated as synthetic sample data for project and learning
 ```text
 
 Student-Performance-Management-System/
-
 │
-
 ├── README.md
-
-├── 01\_Create\_Database.sql
-
-├── 02\_Create\_Tables.sql
-
-├── 03\_Insert\_Data.sql
-
-├── 05\_Basic\_Analysis.sql
-
-├── 06\_Advanced\_Analysis.sql
-
-├── ER\_Diagram.png
-
-└── Project\_Insights.md
-
+├── 01_Create_Database.sql
+├── 02_Create_Tables.sql
+├── 03_Insert_Data.sql
+├── 04_Data_Validation.sql
+├── 05_Basic_Analysis.sql
+├── 06_Advanced_Analysis.sql
+├── ER_Diagram.png
+├── ER_Diagram.dbml
+└── Project_Insights.md
