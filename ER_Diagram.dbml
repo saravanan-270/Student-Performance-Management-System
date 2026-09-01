@@ -1,0 +1,28 @@
+Table Students {
+  student_id int [pk]
+  student_name varchar
+}
+
+Table Courses {
+  course_id int [pk]
+  course_name varchar
+  course_details varchar
+}
+
+Table Enrollment {
+  student_id int
+  course_id int
+  indexes {(student_id, course_id) [pk]}
+}
+
+Table Marks {
+  student_id int
+  course_id int
+  score int
+  indexes {(student_id, course_id) [pk]}
+}
+
+Ref: Enrollment.student_id > Students.student_id
+Ref: Enrollment.course_id > Courses.course_id
+Ref: Marks.student_id > Students.student_id
+Ref: Marks.course_id > Courses.course_id
