@@ -1,236 +1,70 @@
-\# Student Performance Management System
+# Student-Performance-Management-System-MySQL
 
+A **Student Performance Management System built using MySQL** to manage student information, course details, enrollments, and academic performance. The project demonstrates how a relational database can be designed and used to analyze academic data through SQL.
 
+## 📌 Project Overview
 
-\## 1. Project Description
+This project simulates an educational institute where students can enroll in multiple courses and receive scores for their enrolled courses. The database is structured using four related tables: `Students`, `Courses`, `Enrollment`, and `Marks`.
 
+The `Enrollment` table manages the relationship between students and courses, while the `Marks` table stores the performance of students in each course. SQL queries are used to combine and analyze this information to generate useful academic insights.
 
+## 🎯 Objectives
 
-The Student Performance Management System is a MySQL-based relational database project designed to manage student enrollment and academic performance data for an educational institute.
+* Design a structured relational database for managing student and course information.
+* Maintain student enrollment and course performance records.
+* Establish relationships between students and courses using primary and foreign keys.
+* Analyze student performance using SQL queries.
+* Compare student and course performance using aggregate and analytical functions.
+* Identify meaningful patterns such as top-performing students and high-performing courses.
 
+## 📊 Data
 
+The project contains **250 students, 10 courses, 454 enrollments, and 454 performance records**. The student data is synthetically generated using Mockaroo and is used for learning and portfolio purposes.
 
-The project stores student details, course information, student enrollments, and course scores. SQL queries are used to analyze student and course performance and generate useful insights.
+The database includes:
 
+* Student details such as student ID and name.
+* Course details including course name and course information.
+* Enrollment records connecting students with their selected courses.
+* Marks representing the scores obtained by students in their enrolled courses.
 
+## 🔗 Database Structure
 
-\## 2. Business Problem
+The database contains four related tables:
 
+* **Students** – Stores the details of students.
+* **Courses** – Stores available courses and their details.
+* **Enrollment** – Connects students with the courses they are enrolled in.
+* **Marks** – Stores the scores obtained by students for their respective courses.
 
+A student can enroll in multiple courses, and each course can have multiple students. The `Enrollment` table handles this many-to-many relationship, while the `Marks` table records the performance for each student-course combination.
 
-An educational institute needs a structured database to manage student and course information instead of maintaining the data in separate files.
+## 🔍 SQL Analysis
 
+The project uses SQL queries to analyze the academic data and answer practical questions such as:
 
+* How many students are enrolled in the system?
+* How many students are enrolled in each course?
+* What is the average score of each student?
+* Who are the top-performing students?
+* Which students are performing below the overall average?
+* Which course has the highest average score?
+* Which course has the highest number of enrollments?
+* What is the overall average score?
+* How can students be ranked based on their performance?
 
-The institute wants to answer questions such as:
+The analysis uses concepts such as **joins, aggregate functions, grouping, filtering, subqueries, CTEs, CASE expressions, and window functions** including `RANK()`.
 
+## 🔄 Project Workflow
 
+* Identify the requirements and analysis questions.
+* Design the relational database structure.
+* Create the required tables and relationships.
+* Apply primary keys, foreign keys, and composite keys.
+* Generate and insert sample data.
+* Write SQL queries for student, course, and enrollment analysis.
+* Analyze the results to generate meaningful academic insights.
 
-\- How many students are enrolled?
+## 🛠 Tools Used
 
-\- How many students are enrolled in each course?
-
-\- What is the average score of each student?
-
-\- Who are the top-performing students?
-
-\- Which students are performing below the overall average?
-
-\- Which course has the highest average score?
-
-\- Which course has the highest number of enrollments?
-
-\- What is the overall average score?
-
-
-
-\## 3. Objectives
-
-
-
-\- Design a relational database for student and course management.
-
-\- Maintain relationships between students and courses.
-
-\- Store student performance scores.
-
-\- Use SQL to analyze academic performance.
-
-\- Generate meaningful insights from the data.
-
-
-
-\## 4. Database Structure
-
-
-
-The database contains four tables:
-
-
-
-\### Students
-
-Stores student information.
-
-
-
-\- student\_id
-
-\- student\_name
-
-
-
-\### Courses
-
-Stores course information.
-
-
-
-\- course\_id
-
-\- course\_name
-
-\- course\_details
-
-
-
-\### Enrollment
-
-Stores the courses in which students are enrolled.
-
-
-
-\- student\_id
-
-\- course\_id
-
-
-
-\### Marks
-
-Stores the scores obtained by students in their enrolled courses.
-
-
-
-\- student\_id
-
-\- course\_id
-
-\- score
-
-
-
-\## 5. Relationships
-
-
-
-\- One student can enroll in multiple courses.
-
-\- One course can have multiple students.
-
-\- The Enrollment table manages the many-to-many relationship between Students and Courses.
-
-\- Marks records the score of a student for a particular course.
-
-
-
-\## 6. Technologies Used
-
-
-
-\- MySQL
-
-\- MySQL Workbench
-
-\- SQL
-
-\- dbdiagram.io
-
-\- Mockaroo
-
-
-
-\## 7. SQL Concepts Used
-
-
-
-\- CREATE DATABASE
-
-\- CREATE TABLE
-
-\- Primary Keys
-
-\- Foreign Keys
-
-\- Composite Primary Keys
-
-\- INSERT
-
-\- SELECT
-
-\- COUNT()
-
-\- AVG()
-
-\- GROUP BY
-
-\- HAVING
-
-\- ORDER BY
-
-\- LIMIT
-
-\- JOIN
-
-\- CASE
-
-\- Subqueries
-
-\- CTE
-
-\- Window Functions
-
-\- RANK()
-
-
-
-\## 8. Project Data
-
-
-
-The database contains:
-
-
-
-\- 250 students
-
-\- 10 courses
-
-\- 454 enrollments
-
-\- 454 course performance records
-
-
-
-The student data was generated as synthetic sample data for project and learning purposes.
-
-
-
-\## 9. Project Structure
-
-
-
-```text
-
-Student-Performance-Management-System/
-│
-├── README.md
-├── 01_Create_Database.sql
-├── 02_Create_Tables.sql
-├── 03_Insert_Data.sql
-├── 04_Data_Validation.sql
-├── 05_Basic_Analysis.sql
-├── 06_Advanced_Analysis.sql
-├── ER_Diagram.png
-├── ER_Diagram.dbml
-└── Project_Insights.md
+The project was developed using **MySQL and MySQL Workbench**. **dbdiagram.io** was used to design and visualize the database structure, while **Mockaroo** was used to generate synthetic student data.
